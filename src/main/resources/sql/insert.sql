@@ -1,0 +1,3 @@
+
+insert into gateway (id, operacao, endereco, porta, rota) select * from (select 1, 'elementar', 'localhost', '8083', '/calc/elementar') as t where not exists (select id from gateway where id = 1);
+insert into gateway (id, operacao, endereco, porta, rota) select * from (select 2, 'transcendental', 'localhost', '8084', '/calc/transcendental') as t where not exists (select id from gateway where id = 2);
